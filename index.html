@@ -10,14 +10,22 @@
 <body>
 
     <input data-bind="value: firstName">
+    <input data-bind="value: firstName">
     <br>
     <span data-bind="text: firstName"></span>
+    <button onclick="handleClick('David Shams')">Set value</button>
 
     <script>
         var vm = {
             firstName: ko.observable('David')
         }
         ko.applyBindings(vm)
+        function handleClick(value){
+            var nList = document.querySelectorAll('input');
+            console.log(nList)
+            nList[0].value = 'Bob'
+            nList.forEach(e => console.log(e.value = value));
+        }
     </script>
     
 </body>
