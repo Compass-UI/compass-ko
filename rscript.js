@@ -39,5 +39,8 @@ define([
     //     alert($);
     // })
     alert($);//works
-    $('body').append('<h3>RequireJS and jQuery work!</h3>')
+    $('body').append('<h3>RequireJS and jQuery work!</h3>');
+    console.log(document);
+    console.log(document.body);
+    alert(document.body); // This will excecute before console.log()
 })
