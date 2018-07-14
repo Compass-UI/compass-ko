@@ -19,7 +19,7 @@ angular.module('app').controller('mainCtrl', ['$scope', function($scope){
 
 angular.module('app').directive("koDirective", function(){
     return {
-        template: 'Comments: <input data-bind="value: firstName"><br/>Comments: <input data-bind="value: qfirstName">'
+        templateUrl: 'koTemplate.html'
     }
     $scope.$apply();
 })
