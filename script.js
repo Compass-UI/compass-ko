@@ -1,3 +1,5 @@
+///<reference path="node_modules/knockout/build/output/knockout-latest.js">
+
 angular.module('app', []);
 angular.module('app').controller('mainCtrl', ['$scope', function($scope){
     $scope.user = {
@@ -12,6 +14,8 @@ angular.module('app').controller('mainCtrl', ['$scope', function($scope){
 
         }
     }
+    $scope.$apply();
+    $scope.
 }])
 
 angular.module('app').directive("koDirective", function(){
