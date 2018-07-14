@@ -17,6 +17,9 @@
         <span>{{user.address.city}}</span>
         <span>{{user.address.state}}</span>
         <span>{{user.address.country}}</span>
+        <span>{{user.address.comments}}</span>
+        <hr>
+        <ko-directive></ko-directive>
     </div>
 
     <input data-bind="value: firstName">
@@ -24,6 +27,8 @@
     <br>
     <span data-bind="text: firstName"></span>
     <button onclick="handleClick('David Shams')">Set value</button>
+
+
 
     <script>
         var vm = {
@@ -40,7 +45,9 @@
             nList[0].value = 'Bob'
             nList.forEach(e => console.log(e.value = value));
         }
+        
 
+    
     </script>
     <script src="script.js"></script>
     
