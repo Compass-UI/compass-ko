@@ -10,3 +10,27 @@ div.ko {
     border: solid 1px red;
     background-color: aliceblue
 }
+body {
+    padding: 20px;
+    border: solid 1px blue;
+}
+
+/** Create box */
+      /*What will be created*/
+      .box {
+        width: 30px;
+        height: 30px;
+        background-color:red;
+        }
+
+    /*The positioning for the first button*/
+    .btm12 {
+        margin-left:50%;
+        margin-top:5%
+        }
+
+    /*The positioning for the second button*/
+    .btm1 {
+        margin-left:30%;
+        margin-top:10%
+        }
