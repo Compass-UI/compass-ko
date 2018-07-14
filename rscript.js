@@ -1,1 +1,5 @@
-alert('RequireJS');
+require([
+    'jquery'
+], function($){
+    alert($);
+})
