@@ -9,7 +9,7 @@ angular.module('app').controller('mainCtrl', ['$scope', function($scope){
             city: 'Chigago',
             state: 'IL',
             coutnry: 'USA',
-            comments: 'Comments: <input data-bind="value: firstName">'
+            comments: 'Comments: <input data-bind="value: firstName"><br/>Comments: <input data-bind="value: qfirstName">'
 
 
         }
@@ -19,7 +19,7 @@ angular.module('app').controller('mainCtrl', ['$scope', function($scope){
 
 angular.module('app').directive("koDirective", function(){
     return {
-        template: 'Comments: <input data-bind="value: firstName">'
+        template: 'Comments: <input data-bind="value: firstName"><br/>Comments: <input data-bind="value: qfirstName">'
     }
     $scope.$apply();
 })

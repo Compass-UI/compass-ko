@@ -30,27 +30,17 @@
     <span data-bind="text: firstName"></span>
     <button onclick="handleClick('David Shams')">Set value</button>
 
-
-
     <script>
-        var vm = {
-            firstName: ko.observable('David'),
-            price: ko.observable(1995),
-            formatCurrency: function(value){
-                return "$" + value().toFixed(2)
-            }
-        }
-        ko.applyBindings(vm)
-        function handleClick(value){
+
+        handleClick = function(value){
             var nList = document.querySelectorAll('input');
             console.log(nList)
             nList[0].value = 'Bob'
             nList.forEach(e => console.log(e.value = value));
         }
-        
-
-    
     </script>
+
+
     <script src="script.js"></script>
     <script src="qscript.js"></script>
     
