@@ -14,14 +14,3 @@ requirejs.config({
     }
 
 })
-// require([
-//     './node_modules/jquery/dist/jquery.js'
-// ], function($){
-define([
-        'jquery'
-    ], function($){
-    // $(function(){
-    //     alert($);
-    // })
-    alert($);//undefined
-})
