@@ -14,12 +14,12 @@ angular.module('app').controller('mainCtrl', ['$scope', function($scope){
 
         }
     }
-    $scope.$apply();
-    $scope.
+    // $scope.$apply();
 }])
 
 angular.module('app').directive("koDirective", function(){
     return {
         template: 'Comments: <input data-bind="value: firstName">'
     }
+    $scope.$apply();
 })
