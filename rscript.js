@@ -1,3 +1,4 @@
+/// <reference path="./node_modules/jquery/dist/jquery.js" />
 requirejs.config({
     baseUrl: '/',
     paths: {
@@ -37,5 +38,6 @@ define([
     // $(function(){
     //     alert($);
     // })
-    alert($);//undefined
+    alert($);//works
+    $('body').append('<h3>RequireJS and jQuery work!</h3>')
 })
