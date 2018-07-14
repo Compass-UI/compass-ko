@@ -1,10 +1,26 @@
-<span>{{user.name}}</span>
-<span>{{user.address.street}}</span>
-<span>{{user.address.city}}</span>
-<span>{{user.address.state}}</span>
-<span>{{user.address.country}}</span>
-<span>{{user.address.comments}}</span>
-<hr>
-Comments: <input data-bind="value: firstName">
-<br>
-Comments: <input data-bind="value: qfirstName">
+<div ng-controller="mainCtrl">
+    <div class="angular">
+            <h3>koTemplate.html</h3>
+            <span>{{user.name}}</span>
+            <span>{{user.address.street}}</span>
+            <span>{{user.address.city}}</span>
+            <span>{{user.address.state}}</span>
+            <span>{{user.address.country}}</span>
+            <span>{{user.address.comments}}</span>
+    </div>
+
+    <hr>
+    <div class="ko">
+            Comments: <input data-bind="value: firstName">
+            <br>
+            Comments: <input data-bind="value: qfirstName">
+            <hr>
+            <input data-bind="value: firstName">
+            <input data-bind="value: qfirstName">
+            <input data-bind="value: formatCurrency(price)">
+            <br>
+            <span data-bind="text: firstName"></span>
+            <button onclick="handleClick('David Shams')">Set value</button>
+    </div>
+
+</div>
