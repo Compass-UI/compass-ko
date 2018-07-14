@@ -21,5 +21,5 @@ angular.module('app').directive("koDirective", function(){
     return {
         templateUrl: 'koTemplate.html'
     }
-    $scope.$apply();
+    $scope.$apply(); //AMD: must beused for it to work all the time
 })
