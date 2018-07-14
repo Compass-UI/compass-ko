@@ -20,14 +20,18 @@
     </div>
 
     <input data-bind="value: firstName">
-    <input data-bind="value: firstName">
+    <input data-bind="value: formatCurrency(price)">
     <br>
     <span data-bind="text: firstName"></span>
     <button onclick="handleClick('David Shams')">Set value</button>
 
     <script>
         var vm = {
-            firstName: ko.observable('David')
+            firstName: ko.observable('David'),
+            price: ko.observable(1995),
+            formatCurrency: function(value){
+                return "$" + value().toFixed(2)
+            }
         }
         ko.applyBindings(vm)
         function handleClick(value){
@@ -36,6 +40,7 @@
             nList[0].value = 'Bob'
             nList.forEach(e => console.log(e.value = value));
         }
+
     </script>
     <script src="script.js"></script>
     
