@@ -12,3 +12,6 @@
 
 ## Add <reference > to get InteliSense
 
+# Install RequireJS
+
+`npm i requirejs`
