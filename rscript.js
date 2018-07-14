@@ -1,5 +1,5 @@
 require([
-    'jquery'
+    './node_modules/jquery/dist/jquery.js'
 ], function($){
-    alert($);
+    alert($);//undefined
 })
