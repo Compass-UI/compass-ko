@@ -6,7 +6,7 @@ define(['jquery'], function(){
         lname:  'Shams'
     }
     $('#id').text(vm.id);
-    $('#fname').text(vm.fname);
-    $('#lname').text(vm.lname);
+    $('#fname').val(vm.fname);
+    $('#lname').val(vm.lname);
 })
 
