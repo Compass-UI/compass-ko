@@ -1,6 +1,12 @@
 define(['jquery'], function(){
-    $('#id').text('123');
-    $('#fname').text('David');
-    $('#lname').text('Shams');
+
+    var vm = {
+        id: '123',
+        fname: 'David',
+        lname:  'Shams'
+    }
+    $('#id').text(vm.id);
+    $('#fname').text(vm.fname);
+    $('#lname').text(vm.lname);
 })
 
