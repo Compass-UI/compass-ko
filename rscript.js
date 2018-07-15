@@ -15,6 +15,7 @@ requirejs.config({
         knockout: './node_modules/knockout/build/output/knockout-latest.debug',
         index: './index',
         utility: 'utility',
+        Utility: './lib/constructor_module',
     },
     // angular does not support AMD out of the box, put it in a shim
     /**
@@ -46,9 +47,11 @@ define([
     console.log(document);
     console.log(document.body);
     alert(document.body); // This will excecute before console.log()
+    var Util = new Utility();
     document.body.addEventListener('click', function(event){
         console.log(event.clientX, event.clientY);
-        utility.createBox(event.clientX, event.clientY);
+        // utility.createBox(event.clientX, event.clientY);
+        Util.createBox(event.clientX, event.clientY);
 
     })
 })
