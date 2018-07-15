@@ -16,6 +16,7 @@ requirejs.config({
         index: './index',
         utility: 'lib/utility',
         Utility: './lib/constructor_module',
+        dom_module: './dom_module',
     },
     // angular does not support AMD out of the box, put it in a shim
     /**
@@ -36,8 +37,9 @@ define([
         // 'angular',
         // 'knockout',
         // 'index',
-        'utility'
-    ], function($ /** , angular, knockout, index   */, utility){
+        'utility',
+        'dom_module'
+    ], function($ /** , angular, knockout, index   */, utility, dom_module){
     // $(function(){
     //     alert($);
     // })
