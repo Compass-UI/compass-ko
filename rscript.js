@@ -14,7 +14,7 @@ requirejs.config({
         angular: './node_modules/angular/angular',
         knockout: './node_modules/knockout/build/output/knockout-latest.debug',
         index: './index',
-        utility: 'utility',
+        utility: 'lib/utility',
         Utility: './lib/constructor_module',
     },
     // angular does not support AMD out of the box, put it in a shim
@@ -36,8 +36,8 @@ define([
         // 'angular',
         // 'knockout',
         // 'index',
-        // utility
-    ], function($ /** , angular, knockout, index , utility */){
+        'utility'
+    ], function($ /** , angular, knockout, index   */, utility){
     // $(function(){
     //     alert($);
     // })
@@ -48,10 +48,13 @@ define([
     console.log(document.body);
     alert(document.body); // This will excecute before console.log()
     var Util = new Utility();
+    var Mutil = new Utility();
+    Mutil.name = 'John Doe';
     document.body.addEventListener('click', function(event){
         console.log(event.clientX, event.clientY);
         // utility.createBox(event.clientX, event.clientY);
         Util.createBox(event.clientX, event.clientY);
-
+        console.log(Util.name);
+        console.log(Mutil.name);
     })
 })
