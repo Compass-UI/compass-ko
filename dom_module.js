@@ -1,4 +1,4 @@
-define(['jquery'], function(){
+define(['jquery', 'knockout'], function($, ko){
 
     var vm = {
         id: '123',

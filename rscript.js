@@ -12,7 +12,9 @@ requirejs.config({
         // the HTML page.
         jquery: './node_modules/jquery/dist/jquery',
         angular: './node_modules/angular/angular',
-        knockout: './node_modules/knockout/build/output/knockout-latest.debug',
+        knockout: './node_modules/knockout/build/output/knockout-latest',
+        // knockout: './node_modules/knockout/build/output/knockout-latest.debug',
+        // ko: './node_modules/knockout/build/output/knockout-latest.debug',
         index: './index',
         utility: 'lib/utility',
         Utility: './lib/constructor_module',
@@ -35,15 +37,21 @@ requirejs.config({
 define([
         'jquery',
         // 'angular',
-        // 'knockout',
+        'knockout',
         // 'index',
         'utility',
-        'dom_module'
-    ], function($ /** , angular, knockout, index   */, utility, dom_module){
+        'dom_module',
+        'ko_module'
+    ], function(
+        $, /** , angular */ 
+        ko /*, index   */, 
+        utility, 
+        dom_module,
+        ko_module ) {
     // $(function(){
     //     alert($);
     // })
-    alert($);//works
+    alert("ko: ", ko);//works
     $('body').append('<h3>RequireJS and jQuery work!</h3>');
     $('body').append('<div>Click to get (x, y) coordinates</div>');
     console.log(document);
@@ -60,3 +68,7 @@ define([
         console.log(Mutil.name);
     })
 })
+
+// require(['knockout-x.y.z', 'appViewModel', 'domReady!'], function(ko, appViewModel) {
+//         ko.applyBindings(new appViewModel());
+//     });
