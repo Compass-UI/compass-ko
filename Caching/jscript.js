@@ -50,5 +50,8 @@ $(function () {
 });
 
 function doSomething(data) {
+    /** Full response */
     console.log(data);
+    /** just response data */
+    console.log(data.responseJSON);
 }
