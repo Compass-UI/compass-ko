@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Debuggin</title>
     <script src="./node_modules//knockout/build/output/knockout-latest.debug.js"></script>
+    <script src="./knockout.mapping-latest.debug.js"></script>
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -23,17 +24,28 @@
 <body>
     
     <input type="text" data-bind="value: $data">
+    <!-- ko if: true -->
+    THIS WILL SHOW
+    <!-- /ko -->
+    <!-- ko if: false -->
+    THIS WILL NOT SHOW
+    <!-- /ko -->
+    <h3>Debugging</h3>
+    <div data-bind="text: ko.toJSON($data)"></div>
+    <pre data-bind="text: JSON.stringify(ko.toJS($data), null, 2)"></pre>
+    <input type="checkbox" data-bind="checked: show" />Show debugging
+    <label><input type="checkbox" data-bind="checked: displayMessage" /> Display message</label>
+    <div data-bind="if: displayMessage">Here is a message. Astonishing.</div>
+    <button data-bind="click: showHide()">Show debugging</button>
+    <!-- ko if: show -->
+    <br>
     <button data-bind="click: console.log($data)">Log $data</button>
     <button data-bind="click: console.log(ko)">Log ko</button><br>
     <button data-bind="click: console.log($root)">Log $root</button><br>
     <button data-bind="click: console.log($context)">Log $context</button><br>
     <button data-bind="click: console.log($context.$parent? $parent: '$parent not defined')">Log $parent</button><br>
     <button data-bind="click: console.log($context.$parents? $parents: '$parents not defined')">Log $parents</button><br>
-
-    <h3>Debugging</h3>
-    <div data-bind="text: ko.toJSON($data)"></div>
-    <pre data-bind="text: JSON.stringify(ko.toJS($data), null, 2)"></pre>
-
+    <!-- /ko -->
 
     <div class="container">
         <h2>Modal Example</h2>
@@ -69,6 +81,9 @@
         </div>
         
     </div>
+    <!-- WHEN YOU OPEN A MODAL - THIS DIV DOES THE TRICK: -->
+    <!-- uncomment to see: -->
+    <!-- <div class="modal-backdrop show"></div> -->
   
     <!-- END DEBUGGING MODAL -->
 
