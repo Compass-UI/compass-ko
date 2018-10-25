@@ -14,4 +14,4 @@
 
 # Install RequireJS
 
-`npm i requirejs`
+`npm i requirejs`x
